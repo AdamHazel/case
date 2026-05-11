@@ -30,7 +30,7 @@ public class Race
     {
         return
             $"{winner.contestant.Driver.Name} ({winner.contestant.Car.Brand}) with a time of " +
-            $"{winner.time.Hours} hours, {winner.time.Minutes} min, {winner.time.Seconds} sec \n\n";
+            $"{winner.time.Hours} hours, {winner.time.Minutes} min, {winner.time.Seconds} sec";
     }
     
 
@@ -72,15 +72,16 @@ public class Race
             case 1:
             {
                 var winner = winners.Last();
-                Console.WriteLine("Winner is " + _generateWinnerString(winner));
+                Console.WriteLine("\nWinner is " + _generateWinnerString(winner));
+                Console.WriteLine("\n");
                 break;
             }
             default:
             {
-                Console.WriteLine("We have a tie! Today's winners are: ");
+                Console.WriteLine("\nWe have a tie! Today's winners are: ");
                 foreach (var winner in winners)
                     Console.WriteLine(_generateWinnerString(winner));
-
+                Console.WriteLine("\n");
                 break;
             }
         }

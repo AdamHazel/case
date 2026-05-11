@@ -20,6 +20,7 @@ internal class Program
         {
             new Contestant(new Car("Volvo", 120, 10), new Driver("Ola", 5)),
             new Contestant(new Car("BMW", 170, 13), new Driver("Truls", 10)),
+            new Contestant(new Car("Ford", 170, 13), new Driver("Adam", 10)),
             new Contestant(new Car("Nissan", 110, 7), new Driver("Leon", 5)),
             new Contestant(new Car("Subaru", 120, 10), new Driver("Kim", 4)),
             new Contestant(new Car("Toyota", 120, 10), new Driver("Liam", 8)),
