@@ -2,13 +2,13 @@
 
 public class Contestant
 {
-    public Contestant(Car car, Driver driver)
+    public Contestant(Vehicle vehicle, Driver driver)
     {
-        Car = car;
+        Vehicle = vehicle;
         Driver = driver;
     }
 
-    public Car Car { get; }
+    public Vehicle Vehicle { get; }
 
     public Driver Driver { get; }
 }

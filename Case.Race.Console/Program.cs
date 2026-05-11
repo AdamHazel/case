@@ -7,8 +7,8 @@ internal class Program
         var contestants = CreateDummyContestants();
         var races = new List<Race>
         {
-            new Race("Oslobanen", contestants, 10),
-            new Race("Bergensbanen", contestants, 7),
+            new ("Oslobanen", contestants, 10),
+            new ("Bergensbanen", contestants, 7),
         };
         foreach (var race in races)
           race.Start();
@@ -26,6 +26,9 @@ internal class Program
             new Contestant(new Car("Toyota", 120, 10), new Driver("Liam", 8)),
             new Contestant(new Car("Fiat", 120, 10), new Driver("Georg", 3)),
             new Contestant(new Car("Ferrari", 190, 18), new Driver("Sebastian", 7)),
+            new Contestant(new Motorbike("Suzuki", 170, 13), new Driver("Lasse", 10)),
+            new Contestant(new Truck("HV", 90, 40), new Driver("Barry", 10)),
+            new Contestant(new Truck("Mercedes", 110, 40), new Driver("Sally", 9)),
         };
     }
 }

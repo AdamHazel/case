@@ -18,9 +18,9 @@ public class Race
     private TimeSpan _getContestantTotalHours(Contestant contestant)
     {
         decimal skillLevelDriver = contestant.Driver.SkillLevel;
-        if (skillLevelDriver > contestant.Car.HandelingLevel) skillLevelDriver = contestant.Car.HandelingLevel;
+        if (skillLevelDriver > contestant.Vehicle.HandelingLevel) skillLevelDriver = contestant.Vehicle.HandelingLevel;
 
-        decimal averageSpeed = contestant.Car.TopSpeed * (skillLevelDriver / contestant.Car.HandelingLevel);
+        decimal averageSpeed = contestant.Vehicle.TopSpeed * (skillLevelDriver / contestant.Vehicle.HandelingLevel);
         decimal totalHours = LengthOfTrackInKm / averageSpeed;
         
         return TimeSpan.FromHours((double)totalHours);
@@ -29,7 +29,7 @@ public class Race
     private string _generateWinnerString((Contestant contestant, TimeSpan time) winner)
     {
         return
-            $"{winner.contestant.Driver.Name} ({winner.contestant.Car.Brand}) with a time of " +
+            $"{winner.contestant.Driver.Name} ({winner.contestant.Vehicle.Brand} - {winner.contestant.Vehicle.TypeOfVehicle}) with a time of " +
             $"{winner.time.Hours} hours, {winner.time.Minutes} min, {winner.time.Seconds} sec";
     }
     
@@ -61,7 +61,7 @@ public class Race
                 }
             }
             
-            Console.WriteLine($"Elapsed time for contestant, driving {contestant.Car.Brand}, is {Math.Round(totalTime.TotalHours,1)} hours ({totalTime.Hours}:{totalTime.Minutes}:{totalTime.Seconds})");
+            Console.WriteLine($"Elapsed time for contestant, driving {contestant.Vehicle.Brand} ({contestant.Vehicle.TypeOfVehicle}), is {Math.Round(totalTime.TotalHours,1)} hours ({totalTime.Hours}:{totalTime.Minutes}:{totalTime.Seconds})");
         }
         
         switch (winners.Count)

@@ -1,17 +1,11 @@
 ﻿namespace Case.Race;
 
-public class Car
+public class Car : Vehicle
 {
-    public Car(string brand, int topSpeed, int handelingLevel)
+    public Car(string brand, int topSpeed, int handelingLevel) :
+        base(brand, topSpeed, handelingLevel)
     {
-        Brand = brand;
-        TopSpeed = topSpeed;
-        HandelingLevel = handelingLevel;
     }
 
-    public string Brand { get; }
-
-    public decimal TopSpeed { get; }
-
-    public decimal HandelingLevel { get; }
+    public override string TypeOfVehicle { get; set; } = "Car";
 }
