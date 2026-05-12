@@ -61,7 +61,7 @@ public class Race
                 }
             }
             
-            Console.WriteLine($"Elapsed time for contestant, driving {contestant.Car.Brand}, is {Math.Round(totalTime.TotalHours,1)} hours ({totalTime.Hours}:{totalTime.Minutes}:{totalTime.Seconds})");
+            Console.WriteLine($"Elapsed time for contestant, driving {contestant.Car.Brand}, is {Math.Round(totalTime.TotalHours,1)} hours");
         }
         
         switch (winners.Count)
