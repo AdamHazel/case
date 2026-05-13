@@ -4,3 +4,4 @@
 
 - Utfør: Contains tasks categorized as "utfør"
 - carsPlusOthers: Contains code used to discuss the adding of various types of vehicles
+- web_implementation: contains structurzir code for architecture diagrams
