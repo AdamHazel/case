@@ -1,18 +1,18 @@
-name: structurizr_new
+name: structurizr_norgesgruppen
 
 services:
-  structurizr_new:
+  structurizr_norgesgruppen:
     image: structurizr/structurizr
     command: local
-    container_name: structurizr_new
+    container_name: structurizr_norgesgruppen
     ports:
       - "8080:8080"
     volumes:
       - ./workspace:/usr/local/structurizr
     networks:
-      - structurizr_new_net
+      - structurizr_norgesgruppen_net
 
 networks:
-  structurizr_new_net:
-    name: structurizr_new_net
+  structurizr_norgesgruppen_net:
+    name: structurizr_norgesgruppen_net
     driver: bridge
